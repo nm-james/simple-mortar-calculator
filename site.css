@@ -1,0 +1,38 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table {
+    margin-top: 3vh;
+    border-collapse: collapse;
+}
+
+table td {
+    width: 33%;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+table th {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.fireMissionsBody tr td {
+    width: 25%;
+}
+
+h2 {
+    padding-top: 1.75%;
+    margin: 0;
+    margin-bottom: 0.2%;
+    padding-bottom: 0.1%;
+    display: block;
+    border-bottom: 1px solid grey;
+}

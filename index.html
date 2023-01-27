@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arty Calculator</title>
+        <link rel="stylesheet" href="./site.css">
+    </head>
+<body>
+    <h1>Artillery</h1>
+    <h2 style="padding-top: 0%;">Friendly Position</h2>
+    <div id="friendly">
+        <label for="f_grid1">Grid (X)</label>
+        <input type="number" min="0" id="f_grid1" name="f_grid1">
+        
+        <label for="f_grid1">Grid (Y)</label>
+        <input type="number" min="0" id="f_grid2" name="f_grid1">
+
+        <label for="f_grid1">Altitude</label>
+        <input type="number" min="0" id="f_alt" name="f_alt">
+    </div>
+
+    <h2>Fire Mission Information</h2>
+    <div>
+        <label for="f_dist">Distance</label>
+        <input type="number" min="0" id="f_dist" name="f_dist">
+    </div>
+
+    <h2>Fire Mission Adjustments</h2>
+    <div id="hostile">
+        <label for="e_grid1">Grid (X, 4 DIGITS)</label>
+        <input type="number" min="0" id="e_grid1" name="e_grid1">
+
+        <label for="e_grid2">Grid (Y, 4 DIGITS)</label>
+        <input type="number" min="0" id="e_grid2" name="e_grid1">
+
+        <label for="e_alt">Altitude</label>
+        <input type="number" min="0" id="e_alt" name="e_alt">
+
+        <label for="e_round">Rounds</label>
+        <input type="number" min="0" id="e_round" name="e_round">
+
+        <label for="f_name">Name</label>
+        <input type="text" id="f_name" name="f_name">
+
+        <button onclick={createFireMission()}>Submit</button>
+
+        <button onclick={clearFireMission()}>Clear</button>
+    </div>
+    
+    <table id="fireMissions" style="width: 100%">
+        <tr>
+            <th>NAME</th>
+            <th>GRIDS</th>
+            <th>ROUNDS</th>
+        </tr>
+        <tbody id='RATELBody'>
+        </tbody>
+    </table>
+
+    <table id="fireMissionsAdjust" style="width: 100%">
+        <tr>
+            <th>DESIGNATION</th>
+            <th>CHARGE</th>
+            <th>AZ</th>
+            <th>ELEVATION</th>
+        </tr>
+        <tbody id='fireMissionsBody'>
+        </tbody>
+    </table>
+    
+    <script src="./calculate.js"></script>
+</body>
+</html>
